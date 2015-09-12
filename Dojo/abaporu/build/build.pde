@@ -41,7 +41,7 @@ void setup(){
 		.requestAll()
 	;
 
-	
+
 }
 
 void draw() {
@@ -73,8 +73,3 @@ void keyPressed() {
 		draw();
 	}
 }
-
-		
-
-
-		
