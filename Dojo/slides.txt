@@ -1,0 +1,37 @@
+Arte Algoritmica - meio
+Interesses
+Azulejos - Athos - Muda - Onde a história começa
+Piscina
+Joshua Davis
+Definição
+Arte Islâmica - Al Karizimi - Era de Ouro
+Bach - Oferenda Musical - Vi Hart - Shonenberg
+Vera Molnar
+Andrew Sorensen
+Joshua Davis/Pixtil
+Processing/Hype
+Estrutura de Arquivos - Setup de Ambiente - Github Opensource
+Estrutura dos Programas - Method Chainning - Simplicidade - Legibilidade - Aprendizado
+Expressividade - SVG - Feedback loop curto - Aprendizado
+Aleatoriedade
+Recursão - Fractais
+Vetores - ?
+Dojo - Call to Action
+Lista de Referências
+
+
+
+
+
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis consequat, leo vitae mattis lobortis, arcu odio aliquam lacus, vitae accumsan magna ipsum ac urna.
+
+Boa noite, meu nome é Fred Guth e o assunto que escolhi para falar hoje é Arte Algoritmica, ou Arte Generativa.  Algo que fica no meio entre programação e arte.
+
+Contextualizando no assunto de Design, acho que o Design também sempre está no meio. O Design bebe da fonte de vários assuntos para produzir resultados.
+
+Tenho vários interesses, que variam de azulejos a contabilidade. Normalmente digo que sou empreendedor, mas aqui posso me declarar um designer de empresas.
+
+Mas como falava, um desses interesses é Azulejos. Por ser de Brasília, acho que fui contagiado por Athos Bulcão. Mas mesmo no Rio, onde morei por 15 anos, seguia o trabalho de gente como o Coletivo Muda, que faz grafite com azulejos.
+
+E aí, quando nos mudamos de volta para Brasília, me deparo com essa parede e já fico pensando na idéia de desenhar os meus próprios azulejos.  
