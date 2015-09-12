@@ -1,22 +1,23 @@
 import processing.pdf.*;
 boolean record = false;
 
-HColorPool colors;
+int[] colors;
 
 
 
 void setup(){
-	size(600,600);
+	size(800,450);
 	H.init(this).background(#ECECEC);
 	smooth();
-	colors = new HColorPool(#D64453, #5BA5CB);
-	
+	colors = {#D64453, #5BA5CB};
+	float u = width/13;//unit
+	HEllipse left = new HEllipse();
+		
+	H.drawStage();
+
 }
 
 void draw() {
-	
-
-	drawCircle(width/2,height/2,width/2);
 
 	PGraphics tmp = null;
 
@@ -48,7 +49,7 @@ void keyPressed() {
 
 //(x,y)=position; d = diameter
 void drawCircle(float x, float y, float d){
-	
+
 	HEllipse circle = new HEllipse();
 	int currentColor = colors.getColor();
 	circle
@@ -59,7 +60,7 @@ void drawCircle(float x, float y, float d){
 		.fill(currentColor,50)//alpha 100
 	;
 
-	
+
 
 	H.add(circle);
 
@@ -72,9 +73,4 @@ void drawCircle(float x, float y, float d){
 
 	}
 
-}	
-
-		
-
-
-		
+}
