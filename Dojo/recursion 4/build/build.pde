@@ -1,23 +1,19 @@
+import processing.pdf.*;
+boolean record = false;
 
 void setup(){
-	size(600,600);
+	size(768,768);
 	H.init(this).background(#603158);
 	smooth();
 	//frameRate(1);
 	drawCircle(width/2,height/2,width/2, true);
 }
 
-void draw() {
-	
 
-	H.drawStage();
-
-
-}
 
 //(x,y)=position; d = diameter
 void drawCircle(float x, float y, float d, boolean isBlue){
-	
+
 	HEllipse circle = new HEllipse();
 	int red = #fbfbcc;
 	int blue = #99cccc;
@@ -30,21 +26,21 @@ void drawCircle(float x, float y, float d, boolean isBlue){
 		currentColor=red;
 	}
 
-	
+
 	circle
 		.loc(x,y)
 		.size(d)
 		.anchorAt(H.CENTER)
 		.strokeWeight(2)
-		.stroke(#000000)
-		.fill(currentColor,100)//alpha 100
+		.stroke(#333333)
+		.fill(currentColor,80)//alpha 100
 	;
 
-	
 
 
 
-	if (d>10){
+
+	if (d>15){
 
 		H.add(circle);
 		drawCircle(x-d/2, y, d/2, !isBlue);
@@ -54,9 +50,34 @@ void drawCircle(float x, float y, float d, boolean isBlue){
 
 	}
 
-}	
+}
 
-		
+void draw() {
+	H.drawStage();
+	PGraphics tmp = null;
 
+	if (record) {
+		tmp = beginRecord(PDF, "render-recursao.pdf");
+	}
 
-		
+	if (tmp == null) {
+		H.drawStage();
+		} else {
+			PGraphics g = tmp;
+			boolean uses3D = false;
+			float alpha = 1;
+			H.stage().paintAll(g, uses3D, alpha);
+		}
+
+		if (record) {
+			endRecord();
+			record = false;
+		}
+	}
+
+	void keyPressed() {
+		if (key == 's') {
+			record = true;
+			draw();
+		}
+	}

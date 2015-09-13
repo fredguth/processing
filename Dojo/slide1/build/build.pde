@@ -3,40 +3,29 @@ boolean record = false;
 
 
 //int [] colors = {#D64453, #5BA5CB};
-int [] colors = {H.RED, H.BLUE};
+String [] interesses = {"Azulejos", "Processing"};
 
 void setup(){
-	size(800,600);
-	H.init(this).background(#eeeeee);
+	size(1024,568);
+	H.init(this).background(#D9CCC1);
 	smooth();
 //
-	float u = width/10;//unit
+	float u = (0.7*width)/10;//unit
 
 	float diameter =4*u;
 	int alpha=60;
-	while (diameter <= width){
-		HEllipse left = new HEllipse();
-		left
-			.loc(diameter/2,height/2)
-			.size(diameter)
-			.anchorAt(H.CENTER)
-			.noStroke()
-			//.stroke(#CCCCCC)
-			.fill(colors[1], alpha)//alpha 100
+	for (int i=0;i<interesses.lenght;i++){
+		HText interesse = new HText(interesses[i]);
+		interesse
+			.loc((int) random (width), (int) random (height))
+			// .size(diameter)
+			// .anchorAt(H.CENTER)
+			// .noStroke()
+			// //.stroke(#CCCCCC)
+			// .fill(colors[1], alpha)//alpha 100
 		;
-		H.add(left);
-		HEllipse right= new HEllipse();
-		right
-			.loc(width-diameter/2,height/2)
-			.size(diameter)
-			.anchorAt(H.CENTER)
-			.noStroke()
-			//.stroke(#CCCCCC)
-			.fill(colors[0], alpha)//alpha 100
-		;
-		H.add(right);
-		diameter+=u;
-		alpha-=10;
+		H.add(interesse);
+
 	}
 
 	H.drawStage();
@@ -48,7 +37,7 @@ void draw() {
 	PGraphics tmp = null;
 
 	if (record) {
-		tmp = beginRecord(PDF, "render-slide1.pdf");
+		tmp = beginRecord(PDF, "render-slide2.pdf");
 	}
 
 	if (tmp == null) {

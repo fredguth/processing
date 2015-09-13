@@ -11,7 +11,7 @@ void setup(){
 }
 
 void draw() {
-	
+
 
 	H.drawStage();
 
@@ -20,11 +20,11 @@ void draw() {
 
 //(x,y)=position; d = diameter
 void drawCircle(float x, float y, float d){
-	
+
 	HEllipse circle = new HEllipse();
 	int currentColor=colors.getColor();
 
-	
+
 	circle
 		.loc(x,y)
 		.size(d)
@@ -34,7 +34,7 @@ void drawCircle(float x, float y, float d){
 		.fill(currentColor,75)//alpha 100
 	;
 
-	
+
 
 
 
@@ -48,9 +48,4 @@ void drawCircle(float x, float y, float d){
 
 	}
 
-}	
-
-		
-
-
-		
+}
