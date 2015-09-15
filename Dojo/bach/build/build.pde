@@ -5,13 +5,14 @@ HDrawablePool pool;
 //HImage bach;
 HPixelColorist colors;
 
+int cellsize = 30;
 void setup(){
 	size(1028,1185);
 	H.init(this).background(#202020);
 	//bach = new HImage("bach.jpg");
 
 	smooth();
-	int cells = (int) width*height/25;
+	int cells = (int) width*height/cellsize;
 	colors = new HPixelColorist("bach.jpg");
 
 	pool = new HDrawablePool(cells);
@@ -22,8 +23,8 @@ void setup(){
 			new HGridLayout()
 			.startX(5)
 			.startY(5)
-			.spacing(12,12)
-			.cols((int) width/12)
+			.spacing(cellsize,cellsize)
+			.cols((int) width/cellsize)
 		)
 		.onCreate(
 			new HCallback() {
@@ -33,7 +34,7 @@ void setup(){
 						.strokeWeight(1)
 						.stroke(colors.getColor( d.x(), d.y()))
 						.fill(colors.getColor( d.x(), d.y()),100-(int)random(25))
-						.size( 5+(int)random(12), 5+(int)random(12) )
+						.size( cellsize/4 + (int)random(4)*cellsize/4 )
 						//.rotate( (int)random(360) )
 						//.loc( (int)random(width), (int)random(height) )
 						.anchorAt(H.CENTER)
