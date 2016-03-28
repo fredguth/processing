@@ -1,3 +1,4 @@
+import hype.*;
 import processing.pdf.*;
 boolean record = false;
 
