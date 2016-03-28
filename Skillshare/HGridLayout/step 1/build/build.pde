@@ -38,6 +38,7 @@ void setup(){
 						// .anchorAt(H.CENTER)
 					;
 					d.randomColors(colors.fillOnly());
+					d.rotate((int) random (4)*90);
 				}
 			}
 		)
@@ -46,4 +47,4 @@ void setup(){
 
 	H.drawStage();
 }
- 
+

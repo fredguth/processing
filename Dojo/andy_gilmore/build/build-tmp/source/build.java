@@ -49,7 +49,7 @@ public void setup(){
 			.loc( width/2, height+offset-r )
 			.anchorAt(H.CENTER)
 		;
-		r=r*1.8f;
+		r=r*1.3f;
 		H.add(d1);
 	  H.add(d2);
 	}
