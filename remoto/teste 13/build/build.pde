@@ -10,9 +10,9 @@ HColorPool colors;
 
 void setup(){
 	size(500,500);
-	H.init(this).background(#66ccff);
+	H.init(this).background(#FFFFFF);
 	smooth();
-	colors = new HColorPool(#FFFFFF, #0066ff, #003366);
+	colors = new HColorPool(#FFFFFF, #F9BF00, #3DA6AB, #96959C, #D7BC96, #653B96, #F6A39E, #2BBCBF, #EF4A23);
 
 
 }
