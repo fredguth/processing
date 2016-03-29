@@ -16,8 +16,8 @@ void setup(){
 
 	smooth();
 	colors1 = new HPixelColorist("mancha2.png").fillOnly();
-	colors2 = new HColorPool(#FFFFFF, #F9BF00, #3DA6AB, #96959C, #D7BC96, #653B96, #F6A39E, #2BBCBF, #EF4A23);
-
+	//colors2 = new HColorPool(#FFFFFF, #F9BF00, #3DA6AB, #96959C, #D7BC96, #653B96, #F6A39E, #2BBCBF, #EF4A23);
+	colors2 = new HColorPool(#ECECEC,  #D7191B, #1B2B3C, #190A0B);
 
 }
 

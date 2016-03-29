@@ -37,8 +37,8 @@ public void setup(){
 
 	
 	colors1 = new HPixelColorist("mancha2.png").fillOnly();
-	colors2 = new HColorPool(0xffFFFFFF, 0xffF9BF00, 0xff3DA6AB, 0xff96959C, 0xffD7BC96, 0xff653B96, 0xffF6A39E, 0xff2BBCBF, 0xffEF4A23);
-
+	//colors2 = new HColorPool(#FFFFFF, #F9BF00, #3DA6AB, #96959C, #D7BC96, #653B96, #F6A39E, #2BBCBF, #EF4A23);
+	colors2 = new HColorPool(0xffECECEC,  0xffD7191B, 0xff1B2B3C, 0xff190A0B);
 
 }
 
