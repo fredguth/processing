@@ -1,30 +1,30 @@
 import processing.pdf.*;
+import hype.*;
+import hype.extended.colorist.*;
+import hype.extended.layout.*;
+
 HDrawablePool pool1, pool2, pool3;
 HPixelColorist colors1;
 HColorPool colors2;
 HCanvas c1,c2,c3;
+boolean record = false;
 
 
 void setup(){
 	size(500,500);
 	H.init(this).background(#66ccff);
-	c1 = new HCanvas().autoClear(true);
-	c2 = new HCanvas().autoClear(true);
-	c3 = new HCanvas().autoClear(true);
 
-	H.add(c1);
-	H.add(c2);
-	H.add(c3);
 	smooth();
 	colors1 = new HPixelColorist("mancha2.png").fillOnly();
 	colors2 = new HColorPool(#FFFFFF, #0066ff, #003366);
+
+
 }
 
 void draw(){
-	pool1 = new HDrawablePool(100);
-	pool2 = new HDrawablePool(100);
-	pool3 = new HDrawablePool(100);
-	pool1.autoParent(c1)
+	pool1 = new HDrawablePool(50);
+	pool2 = new HDrawablePool(50);
+	pool1.autoAddToStage()
 		.add(new HShape("muda1.svg"),16)
 		.add(new HShape("muda2.svg"),16)
 		.add(new HShape("muda3.svg"),16)
@@ -76,7 +76,7 @@ void draw(){
 		)
 	;
 
-	pool2.autoParent(c2)
+	pool2.autoAddToStage()
 		.add(new HShape("muda1.svg"),1)
 		.add(new HShape("muda2.svg"),1)
 		.add(new HShape("muda3.svg"),1)
@@ -119,7 +119,6 @@ void draw(){
 						d.randomColors(colors2.fillOnly());
 					}
 					else {
-						d.fill(#FFFFFF);
 						d.alpha(0);
 					}
 
@@ -130,29 +129,22 @@ void draw(){
 	;
 
 
+
 	if (mousePressed) {
- 		pool1.shuffleRequestAll();
- 		pool2.shuffleRequestAll();
- 		//pool3.shuffleRequestAll();
- 		H.drawStage();
-    pool1.drain(true);
-    pool2.drain(true);
-    //pool3.drain(true);
-  }
+			PGraphics tmp = beginRecord(PDF, "frame-####.pdf");
+			pool1.shuffleRequestAll();
+	 		pool2.shuffleRequestAll();
+	 		H.stage().paintAll(tmp, false, 1);
+			endRecord();
+	 		H.drawStage();
+			pool1.drain(true);
+			pool2.drain(true);
 
+
+
+
+
+  	}
 
 }
 
-public void saveVector() {
-	PGraphics tmp = beginRecord(PDF, "render.pdf");
-
-	H.stage().paintAll(tmp, false, 1); // PGraphics, uses3D, alpha
-
-
-	endRecord();
-}
-public void keyPressed() {
-	if (key == 's') {
-		saveVector();
-	}
-}

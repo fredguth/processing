@@ -31,6 +31,7 @@ void setup(){
 
 void draw(){
 
+
 	pool1 = new HDrawablePool(25);
 //	pool2 = new HDrawablePool(25);
 	//pool1.autoParent(c1)
@@ -79,53 +80,7 @@ void draw(){
 		)
 	;
 
-	// pool2.autoAddToStage()
-	// 	.add(new HShape("testB-1.svg"))
-	// 	.add(new HShape("testB-2.svg"))
 
-
-	// 	// .add(new HShape("svg2.svg"))
-	// 	// .add(new HShape("svg3.svg"))
-	// 	// .add(new HShape("svg4.svg"))
-	// 	// .add(new HShape("svg5.svg"))
-	// 	// .add(new HShape("svg6.svg"))
-
-	// 	.layout(
-	// 		new HGridLayout()
-	// 		.startX(50)
-	// 		.startY(50)
-	// 		.spacing(100,100)
-	// 		.cols(5)
-	// 	)
-
-	// 	.onRequest(
-	// 		new HCallback() {
-	// 			public void run(Object obj) {
-	// 				HShape d = (HShape) obj;
-	// 				d
-	// 					.enableStyle(false)
-	// 					.strokeWeight(0)
-	// 					.anchorAt(H.CENTER)
-	// 					.size(100,100)
-	// 					// .fill(colors1.getColor(d.x(), d.y()))
-	// 				;
-	// 				d.rotate( (int)random(4) * 90 );
-	// 				// if (colors1.getColor(d.x(), d.y()) >= (#666666) &&
-	// 				// 		colors1.getColor(d.x(), d.y()) <= (#CCCCCC)	) {
-	// 					// log(colors1.getColor(d.x(), d.y()));
-	// 				d.randomColors(colors2.fillOnly());
-
-	// 				// }
-	// 				// else {
-	// 				// 	d.fill(#FFFFFF);
-	// 				// 	d.alpha(0);
-	// 				// }
-
-	// 				//d.randomColors(colors1.fillOnly());
-	// 			}
-	// 		}
-	// 	)
-	// ;
 
 	if (record) {
 		PGraphics tmp = beginRecord(PDF, "frame-####.pdf");
