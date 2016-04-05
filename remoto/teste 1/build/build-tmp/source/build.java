@@ -22,6 +22,8 @@ HColorPool colors;
 public void setup(){
 	
 	H.init(this).background(0xffFFFFFF);
+	colors = new HColorPool(0xffECECEC,  0xffD7191B, 0xff1B2B3C, 0xff190A0B);
+
 	
 
 
@@ -54,11 +56,10 @@ public void draw(){
 						.strokeJoin(ROUND)
 						.strokeCap(ROUND)
 						.strokeWeight(0)
-						.fill(0xff000000)
 						.anchorAt(H.CENTER)
 					;
 					d.rotate( (int)random(4) * 90 );
-					//d.randomColors(colors.fillOnly());
+					d.randomColors(colors.fillOnly());
 				}
 			}
 		)

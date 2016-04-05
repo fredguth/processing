@@ -84,7 +84,7 @@ public void draw(){
 				public void run(Object obj) {
 					HShape d = (HShape) obj;
 					d
-						.enableStyle(true)
+						.enableStyle(false)
 						.strokeWeight(0)
 						.anchorAt(H.CENTER)
 						.size(50,50)

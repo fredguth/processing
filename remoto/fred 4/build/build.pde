@@ -14,11 +14,11 @@ boolean record = false;
 void setup(){
 	size(500,500);
 	H.init(this).background(#ffffff);
-	c1 = new HCanvas().autoClear(true);
-	c2 = new HCanvas().autoClear(true);
+	// c1 = new HCanvas().autoClear(true);
+	// c2 = new HCanvas().autoClear(true);
 	// c3 = new HCanvas().autoClear(true);
-	H.add(c1);
-	H.add(c2);
+	// H.add(c1);
+	// H.add(c2);
 
 	// H.add(c3);
 
@@ -34,16 +34,20 @@ void draw(){
 
 	pool1 = new HDrawablePool(100);
 	//pool2 = new HDrawablePool(100);
-	//pool1.autoParent(c1)
-	pool1.autoParent(c1)
-		.add(new HShape("angles1.svg"),4)
-		.add(new HShape("angles2.svg"),2)
-		.add(new HShape("angles3.svg"),1)
-		.add(new HShape("angles4.svg"),4)
-		.add(new HShape("angles5.svg"),2)
-		.add(new HShape("angles6.svg"),1)
-		.add(new HShape("angles7.svg"),1)
-		.add(new HShape("angles8.svg"),1)
+	//pool1.autoAddToStage()
+	pool1.autoAddToStage()
+		.add(new HShape("angles1.svg"))
+		.add(new HShape("angles2.svg"))
+		.add(new HShape("angles3.svg"))
+		.add(new HShape("angles4.svg"))
+		.add(new HShape("angles5.svg"))
+		.add(new HShape("angles6.svg"))
+		.add(new HShape("angles7.svg"))
+		.add(new HShape("angles8.svg"))
+		.add(new HShape("angles9.svg"))
+		.add(new HShape("angles10.svg"))
+		.add(new HShape("angles11.svg"))
+		.add(new HShape("angles12.svg"))
 
 
 		// .add(new HShape("svg2.svg"))
@@ -73,6 +77,7 @@ void draw(){
 						// .fill(colors.getColor(d.x(), d.y()))
 					;
 					d.rotate( (int)random(4) * 180 );
+					d.scale(-1 + (int)random(2) * 2,1);
 
 					// if (colors1.getColor(d.x(), d.y()) <= (#666666)) {
 					// 	// log(colors1.getColor(d.x(), d.y()));
@@ -88,7 +93,7 @@ void draw(){
 			}
 		)
 	;
-	// pool2.autoParent(c2)
+	// pool2.autoAddToStage()
 	// 	.add(new HShape("testB-1.svg"))
 	// 	.add(new HShape("testB-2.svg"))
 
@@ -141,12 +146,12 @@ void draw(){
 	if (mousePressed) {
 			PGraphics tmp = beginRecord(PDF, "frame-####.pdf");
 			pool1.shuffleRequestAll();
-	 		// pool2.shuffleRequestAll();
+	 		//pool2.shuffleRequestAll();
 	 		H.stage().paintAll(tmp, false, 1);
 			endRecord();
 	 		H.drawStage();
 			pool1.drain(true);
-			// pool2.drain(true);
+			//pool2.drain(true);
 
  	}
 

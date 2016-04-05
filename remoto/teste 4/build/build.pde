@@ -3,15 +3,15 @@ HPixelColorist colors;
 
 
 void setup(){
-	size(500,500);
+	size(1080,360);
 	H.init(this).background(#FFFFFF);
 	smooth();
-	colors = new HPixelColorist("mancha.png").fillOnly();
+	//colors = new HPixelColorist("mancha4.png").fillOnly();
 
 }
 
 void draw(){
-	pool = new HDrawablePool(100);
+	pool = new HDrawablePool(108);
 	pool.autoAddToStage()
 		.add(new HShape("quarto.svg"),16)
 		.add(new HShape("triangulo.svg"),16)
@@ -26,10 +26,10 @@ void draw(){
 
 		.layout(
 			new HGridLayout()
-			.startX(25)
-			.startY(25)
-			.spacing(50,50)
-			.cols(10)
+			.startX(30)
+			.startY(30)
+			.spacing(60,60)
+			.cols(18)
 		)
 
 		.onRequest(
@@ -41,8 +41,10 @@ void draw(){
 						.strokeJoin(ROUND)
 						.strokeCap(ROUND)
 						.strokeWeight(0)
-						.fill(colors.getColor( d.x(), d.y()))
+						//.fill(colors.getColor( d.x(), d.y()))
+						.fill(#000000)
 						.anchorAt(H.CENTER)
+						.size(58,58)
 					;
 					d.rotate( (int)random(4) * 90 );
 					//d.randomColors(colors.fillOnly());

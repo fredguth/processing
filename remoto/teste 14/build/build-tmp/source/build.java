@@ -43,8 +43,8 @@ public void setup(){
 }
 
 public void draw(){
-	pool1 = new HDrawablePool(50);
-	pool2 = new HDrawablePool(50);
+	pool1 = new HDrawablePool(60);
+	pool2 = new HDrawablePool(60);
 	pool1.autoAddToStage()
 		.add(new HShape("muda1.svg"),16)
 		.add(new HShape("muda2.svg"),16)
@@ -64,10 +64,10 @@ public void draw(){
 
 		.layout(
 			new HGridLayout()
-			.startX(50)
-			.startY(50)
-			.spacing(100,100)
-			.cols(5)
+			.startX(30)
+			.startY(30)
+			.spacing(60,60)
+			.cols(18)
 		)
 
 		.onRequest(
@@ -78,7 +78,7 @@ public void draw(){
 						.enableStyle(false)
 						.noStroke()
 						.anchorAt(H.CENTER)
-						.size(100,100)
+						.size(60,60)
 						// .fill(colors.getColor(d.x(), d.y()))
 					;
 					d.rotate( (int)random(4) * 90 );
@@ -116,10 +116,10 @@ public void draw(){
 
 		.layout(
 			new HGridLayout()
-			.startX(50)
-			.startY(50)
-			.spacing(100,100)
-			.cols(5)
+			.startX(30)
+			.startY(30)
+			.spacing(60,60)
+			.cols(18)
 		)
 
 		.onRequest(
@@ -130,7 +130,7 @@ public void draw(){
 						.enableStyle(false)
 						.noStroke()
 						.anchorAt(H.CENTER)
-						.size(100,100)
+						.size(60,60)
 						// .fill(colors1.getColor(d.x(), d.y()))
 					;
 					d.rotate( (int)random(4) * 90 );
@@ -169,7 +169,7 @@ public void draw(){
 
 }
 
-  public void settings() { 	size(500,500); 	smooth(); }
+  public void settings() { 	size(1080,360); 	smooth(); }
   static public void main(String[] passedArgs) {
     String[] appletArgs = new String[] { "build" };
     if (passedArgs != null) {
